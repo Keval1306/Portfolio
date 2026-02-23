@@ -7,7 +7,7 @@ const projects = [
         technologies: ["Python", "OOP", "File I/O", "CLI"],
         githubUrl: "https://github.com/Keval1306/Bank-management-in-python",
         liveUrl: null,
-        image: "🏦"
+        image: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>`
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const projects = [
         technologies: ["HTML5", "CSS3", "JavaScript", "WeatherAPI"],
         githubUrl: "https://github.com/Keval1306/weather-app",
         liveUrl: "https://keval1306.github.io/weather-app/",
-        image: "🌤️"
+        image: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-sun"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg>`
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ const projects = [
         technologies: ["Python", "Google Gemini API", "REST API", "NLP"],
         githubUrl: "https://github.com/Keval1306/Chatbot-using-LLM-like-Gemini",
         liveUrl: null,
-        image: "🤖"
+        image: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>`
     },
     {
         id: 4,
@@ -34,7 +34,7 @@ const projects = [
         technologies: ["Python", "scikit-learn", "Pandas", "NumPy", "Jupyter"],
         githubUrl: "https://github.com/Keval1306/disease-prediction-ml",
         liveUrl: null,
-        image: "🏥"
+        image: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>`
     },
     {
         id: 5,
@@ -43,7 +43,7 @@ const projects = [
         technologies: ["Python", "Streamlit", "Data Visualization", "Analytics"],
         githubUrl: "https://github.com/Keval1306/streamlit-bank-management-system",
         liveUrl: null,
-        image: "💰"
+        image: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><rect width="4" height="7" x="7" y="10" rx="1"/><rect width="4" height="12" x="15" y="5" rx="1"/></svg>`
     }
 ];
 

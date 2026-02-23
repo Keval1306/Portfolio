@@ -16,11 +16,11 @@ if (currentTheme === 'dark') {
 // Theme toggle event listener
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
+
     // Update icon
     const isDarkMode = document.body.classList.contains('dark-mode');
     themeIcon.textContent = isDarkMode ? '☀️' : '🌙';
-    
+
     // Save preference
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 });
@@ -77,7 +77,7 @@ window.addEventListener('scroll', () => {
 
 function renderProjects() {
     const projectsContainer = document.getElementById('projects-container');
-    
+
     if (!projectsContainer || typeof projects === 'undefined') {
         console.error('Projects container or data not found');
         return;
@@ -86,7 +86,7 @@ function renderProjects() {
     projectsContainer.innerHTML = projects.map(project => `
         <div class="project-card">
             <div class="project-header">
-                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">${project.image}</div>
+                <div style="color: var(--primary-color); margin-bottom: 1rem; display: flex; align-items: center;">${project.image}</div>
                 <h3 class="project-title">${project.name}</h3>
                 <p class="project-description">${project.description}</p>
             </div>
@@ -100,7 +100,7 @@ function renderProjects() {
                     </a>
                     ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
                         Live Demo
-                    </a>` : `<span class="project-link disabled">No Demo</span>`}
+                    </a>` : ''}
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@ const revealOnScroll = () => {
     revealElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        
+
         if (elementTop < windowHeight - 100) {
             element.style.opacity = '1';
         }

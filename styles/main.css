@@ -7,21 +7,21 @@
     --primary-dark: #1e40af;
     --secondary-color: #8b5cf6;
     --accent-color: #ec4899;
-    
+
     --bg-primary: #ffffff;
     --bg-secondary: #f9fafb;
     --bg-tertiary: #f3f4f6;
-    
+
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
     --text-tertiary: #9ca3af;
-    
+
     --border-color: #e5e7eb;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    
+
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
@@ -30,11 +30,11 @@ body.dark-mode {
     --bg-primary: #111827;
     --bg-secondary: #1f2937;
     --bg-tertiary: #374151;
-    
+
     --text-primary: #f9fafb;
     --text-secondary: #d1d5db;
     --text-tertiary: #9ca3af;
-    
+
     --border-color: #374151;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
@@ -68,7 +68,12 @@ body {
    TYPOGRAPHY
    ============================================= */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
 }
@@ -371,9 +376,12 @@ header .theme-toggle:hover {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     50% {
         transform: translate(30px, -30px);
     }
@@ -422,6 +430,7 @@ header .theme-toggle:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -521,6 +530,136 @@ header .theme-toggle:hover {
 .skill-chip:hover {
     transform: scale(1.05);
     box-shadow: var(--shadow-md);
+}
+
+/* =============================================
+   SECTION DIVIDER
+   ============================================= */
+
+.section-divider {
+    border-top: 1px solid var(--border-color);
+}
+
+/* =============================================
+   INTERNSHIPS SECTION
+   ============================================= */
+
+.internships-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.internship-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+}
+
+.internship-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
+.internship-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.internship-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.05), transparent);
+}
+
+.company-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-radius: 12px;
+    color: var(--primary-color);
+}
+
+.internship-title-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.internship-title-group h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.company-name {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.internship-duration {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.internship-body {
+    padding: 2rem;
+}
+
+.internship-responsibilities {
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+}
+
+.internship-responsibilities li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.internship-responsibilities li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.internship-responsibilities strong {
+    color: var(--text-primary);
+}
+
+.internship-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 /* =============================================
@@ -656,55 +795,40 @@ header .theme-toggle:hover {
 .timeline {
     position: relative;
     padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    top: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
 }
 
 .timeline-item {
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-left: 3.5rem;
 }
 
-.timeline-item:nth-child(odd) {
-    grid-template-columns: 1fr 1fr;
-}
-
-.timeline-item:nth-child(odd) .timeline-marker {
-    grid-column: 2;
-    margin-left: -21px;
-}
-
-.timeline-item:nth-child(even) {
-    grid-template-columns: 1fr 1fr;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    grid-column: 1;
-}
-
-.timeline-item:nth-child(even) .timeline-marker {
-    grid-column: 2;
-    margin-left: -21px;
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-marker {
+    position: absolute;
+    left: -20px;
+    top: 0;
     width: 42px;
     height: 42px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 50%;
     border: 3px solid var(--bg-primary);
-    margin: auto;
-    grid-row: 1;
+    z-index: 1;
 }
 
 .timeline-content {
@@ -713,6 +837,12 @@ header .theme-toggle:hover {
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
     border-left: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
 }
 
 .timeline-content h3 {
