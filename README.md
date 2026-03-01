@@ -145,7 +145,7 @@ All sections adapt beautifully to any screen size.
 
 - **Email**: kevaljamnapara@gmail.com
 - **GitHub**: [Keval1306](https://github.com/Keval1306)
-- **LinkedIn**: [keval-1344](https://www.linkedin.com/in/keval1344)
+- **LinkedIn**: [keval-1344](https://linkedin.com/in/kevaljamnapara)
 
 ## 📄 License
 
